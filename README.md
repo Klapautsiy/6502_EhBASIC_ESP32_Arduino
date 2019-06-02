@@ -4,8 +4,8 @@
 (Derived from EhBASIC)
 
 <pre>
-fork
-Arduino 6502 emulator + BASIC interpreter
+fork:
+- Arduino 6502 emulator + BASIC interpreter
 http://forum.arduino.cc/index.php?topic=193216.0
 
 assembly tools:
@@ -14,7 +14,7 @@ assembly tools:
 - Arduino ESP32 filesystem uploader
 https://github.com/me-no-dev/arduino-esp32fs-plugin
 
-library Arduino IDE titanium bicycle for button. v14.1
+- library Arduino IDE titanium bicycle for button. v14.1
 https://github.com/Klapautsiy/titanium-bicycle-for-button/releases/tag/BUTTON-v14.1
 
 - 6502 EhBASIC V2.22
