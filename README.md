@@ -4,8 +4,6 @@
 (Derived from EhBASIC)
 
 <pre>
-tools:
-
 fork
 Arduino 6502 emulator + BASIC interpreter
 http://forum.arduino.cc/index.php?topic=193216.0
@@ -47,7 +45,6 @@ blink LED board
 POKE $FF00,0
 POKE $FF00,1
 print LCD1602
-
 </pre>
 
 ![](https://raw.githubusercontent.com/Klapautsiy/6502_EhBASIC_ESP32_Arduino/master/6502_EhBASIC_ESP32.gif)
