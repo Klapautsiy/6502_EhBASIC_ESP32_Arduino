@@ -1,0 +1,31 @@
+
+// LiquidCrystal lcd(RS,  E, D4, D5, D6, D7)
+   LiquidCrystal lcd(32, 33, 25, 26, 27, 14);
+
+
+
+                                  +-------------+
+                -'+3.3V'- VIN 3.3 |             | GND     -'-'-
+      +-----_-HARD_RESET-      EN |             | GPIO 23 -
+      |               ->- GPIO 36 |             | GPIO 22 -
+      |               ->- GPIO 39 |             | GPIO  1 -TX0-*
+      |               ->- GPIO 34 |             | GPIO  3 -RX0-*
+      |               ->- GPIO 35 |             | GPIO 21 -
+      |         LCD(RS) - GPIO 32 |             | GND     -'-'----------+
+      |         LCD( E) - GPIO 33 |             | GPIO 19 -             |
+      |         LCD(D4) - GPIO 25 |             | GPIO 18 -             |
+      |         LCD(D5) - GPIO 26 |             | GPIO  5 -             |
+      |         LCD(D6) - GPIO 27 |             | GPIO 17 -TX2->-       |
+      |         LCD(D7) - GPIO 14 |             | GPIO 16 -RX2-<-       |
+      +----_----READ_RAM- GPIO 12 |             | GPIO  4 -SAVE_RAM---_-+
+      +-------------'-'-- GND     |             | GPIO  0 -WARM_RESET-_-+
+      +----_--INPUT_LIST- GPIO 13 |             | GPIO  2 -LED-         |
+                       *- GPIO  9 |             | GPIO 15 -NO BOOT LOG--+
+                       *- GPIO 10 |             | GPIO  8 -*
+                       *- GPIO 11 |             | GPIO  7 -*
+                  -'+5V'-  VIN 5V |             | GPIO  6 -*
+                                  +-----===-----+
+
+
+
+
