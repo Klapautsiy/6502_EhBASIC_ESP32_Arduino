@@ -51,8 +51,6 @@ uint8_t sp, a, x, y, cpustatus;
 uint16_t ea, reladdr, value, result;
 uint8_t opcode, useaccum;
 
-// #include "RAM.h"
-
 
 uint8_t read6502(uint16_t address) {
 if ( address == 0xFF04) return(getkey()); //EhBASIC simulated ASIC input

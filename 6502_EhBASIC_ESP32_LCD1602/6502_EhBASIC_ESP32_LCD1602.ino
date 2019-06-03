@@ -186,9 +186,9 @@ Serial.print("HARD RESET");
 
 reset6502();
 
-// TEST
+// test LCD
 // lcd.setCursor(0, 0);
-// lcd.print  ("TEST lcd");
+// lcd.print  ("test LCD");
 
 for (int i = 0; i < 16; i++) {LCD_VIDEO_RAM[i] = ' ';}
 
