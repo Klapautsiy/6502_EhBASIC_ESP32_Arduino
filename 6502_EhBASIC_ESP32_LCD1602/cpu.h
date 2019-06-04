@@ -1,7 +1,15 @@
 
 #include <Arduino.h>
 
+#include "RAM.h"
+
+extern void    char_output(uint8_t value);
+extern uint8_t char_input();
+
 #define RAM_SIZE 65536 // 64K
+
+#define IO_AREA 0xFF00
+
 
 //6502 defines
 #define UNDOCUMENTED //when this is defined, undocumented opcodes are handled.
@@ -53,13 +61,13 @@ uint8_t opcode, useaccum;
 
 
 uint8_t read6502(uint16_t address) {
-if ( address == 0xFF04) return(getkey()); //EhBASIC simulated ASIC input
+if ( address == IO_AREA + 0x04) return(char_input()); //EhBASIC simulated ASIC input
                         return(RAM[address]);
 }
 
 void write6502(uint16_t address, uint8_t value) {
 RAM[address] = value;
-if (address == 0xFF01) serout(value); // EhBASIC simulated ASIC output
+if (address == IO_AREA + 0x01) char_output(value); // EhBASIC simulated ASIC output
 }
 
 
